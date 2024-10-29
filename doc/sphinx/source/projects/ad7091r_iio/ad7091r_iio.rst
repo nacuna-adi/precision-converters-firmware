@@ -41,7 +41,7 @@ to communicates with IIO device.
 
 .. Useful links Section
 
-.. include:: /source/useful_links.rst
+.. include:: /source/useful_links_stm32.rst
 
 ====================
 Hardware Connections
@@ -75,11 +75,23 @@ Connect the VIO_ADJUST jumper on the SDP-K1 board to 3.3V position to drive SDP-
 
 .. Communication Interface section:
 
-.. include:: /source/hardware/comm_interface.rst #TODO: Chnage wording
+SDP-K1 is powered through USB connection from the computer. SDP-K1 MCU board
+acts as a serial device when connected to PC, which creates a serial ports to connect to IIO
+client application running on PC. The serial port assigned to a device can be seen
+through the device manager for windows-based OS as shown below:
+
+.. image:: /source/hardware/serial_ports_view.png
+   :width: 350
+
+.. note::
+
+   The serial port naming is used differently on different operating systems.
+   For example, Linux uses terms such as dev/ttyUSB* and Mac uses terms such as dev/tty.USB*.
+   Please check serial port naming for your selected OS.
 
 .. Project Build Section:
     
-.. include:: /source/build/project_build.rst #TODO: Change: Remove Mbed setup
+.. include:: /source/build/project_build_stm32.rst
 
 .. IIO Ecosystem Section:
     
